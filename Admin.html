@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<!-- Link style bootstrap -->
+	<link rel="stylesheet"
+            href=
+"https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity=
+"sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+            crossorigin="anonymous" />
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <style>
+	</style>
+
+        
+</head>
+<body>
+	<!-- Debut menu-->
+	<div>
+		<nav class="navbar navbar-expand d-flex flex-column align-item-start tab-pane fade show text-white shadow-lg p-2 mb-5  rounded" id="sidebar" >
+			
+			<a href="" class="navbar-brand text-light">
+				<div class="display-5 font-weight-bold">
+					<img src="image/school.png">
+					SIGES
+				</div>
+			</a>
+  					<a href="" class="navbar-brand text-light">				
+					<img src="image/admin.png" class="rounded-circle border-primary shadow-lg p-1 bg-body rounded" alt="Administrateur">
+					Duckens
+				</a>
+
+			
+			<ul class="navbar-nav  nav-tabs d-flex flex-column mt-3 w-100">
+				 <div class="dropdown-divider"></div>
+				<li class="nav-item w-100">
+					<a href="#content1" class="nav-link text-light pl-4 menu" data-page="pagehome"><img src="image/home.png">Acceuil</a>
+					
+				</li>
+				 <div class="dropdown-divider"></div>
+				<li class="nav-item dropdown w-100">
+					<a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"><img src="image/student.png"> Elèves</a>
+					 <div class="dropdown-divider"></div>
+					<ul class="dropdown-menu w-100 shadow p-3 mb-5 rounded border border-info" aria-labelledby="navbarDropdown " >
+						<li>
+							<a href="#content2" class="dropdown-item text-light pl-4 p-2 menu" data-page="pagelisteeleve"><img src="image/liststudent.png">Liste élève</a>
+						</li>
+						<li>
+							<a href="#content3" class="dropdown-item text-light pl-4 p-2 menu" data-page="pagedossiereleve"> 
+						<img src="image/folderstudent.png">	Dossier élève</a>
+						</li>
+						<li>
+
+							<a href="#" class="dropdown-item text-light pl-4 p-2 menu" data-toggle="modal"
+                    data-target="#exampleModal"> <img src="image/newstudent.png">Ajouter élévee</a>
+						</li>
+						
+					</ul>
+					
+				</li>
+				<li class="nav-item w-100">
+					<a href="#contntent4" class="nav-link text-light pl-4" tada-toggle="tab"> <img src="image/teacher.png">Professeurs</a>
+					
+				</li>
+				
+			</ul>			
+		</nav>
+		<!----------------------------- Fin menu /navbar -------------------------------------------------->
+
+		<!-- Debut des pages -->
+
+		<section class="my-container">
+			<!-- debut Menu horizontal et boutton navbar -->
+			<ul class="nav flex-column flex-sm-row" >
+				<li class="nav-item text-sm-center nav-link">
+    			<button class="btn btn-outline-primary" id="menu-btn"> <img src="image/menu.png"></button>
+  				</li>
+  				<li class="nav-item text-sm-center nav-link">
+  					<form class="d-flex">
+      				  <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+        				<button class="btn btn-outline-info mx-4" type="submit">Search</button>
+     				 </form>
+  				</li>
+  				 
+			</ul>
+
+			<!-- Fin Menu horizontal et boutton navbar -->
+
+			<!-- Debut des contenus de la page -->
+
+			<!--Page Home -->
+
+			<div class="m-2 mycontent shadow-lg p-3 mb-5 bg-body rounded page" id="pagehome" >
+
+
+				<div class="row d-flex justify-content-evenly page">
+							<div class="col-md-3 shadow-lg p-3 mb-5 bg-primary rounded mx-4" >
+						hhhhhhhhhhh
+									
+						
+					</div>
+
+					<div class="col-md-3 shadow-lg p-3 mb-5 bg-body rounded mx-4" >
+						kkkkkk
+					</div>
+					<div class="col-md-3 shadow-lg p-3 mb-5 bg-info rounded mx-4">
+						kkkkkk
+					</div>
+			
+				</div>			
+				
+			</div>
+			<!--Page Dossier eleve -->
+			<div class="m-2 mycontent shadow-lg p-3 mb-5 bg-body rounded page" id="pagedossiereleve" >
+				<div class="row d-flex justify-content-evenly page">
+							
+					<h1>Dossier</h1>
+				</div>			
+				
+			</div>
+			<!--Page liste eleve -->
+			<div class="m-2 mycontent shadow-lg p-3 mb-5 bg-body rounded page" id="pagelisteeleve" >
+				<div class="row d-flex justify-content-evenly">
+					<div class="col-md-6">
+					<form class="d-flex row-column mb-2">
+      				  <input class="form-control me-2" type="search" placeholder="Rechercher code personne responsable" aria-label="Search">
+        				<button class="btn btn-outline-info mx-2" type="submit">Rechercher</button>
+        				<span>Ou</span>
+        				<button type="button" class="btn btn-info mx-2" data-toggle="modal"
+                    data-target="#exampleModal">+Ajouter</button>
+     				 </form>
+     				</div>
+					
+				</div>
+				
+				<div class="row d-flex justify-content-evenly page">
+							<form class="form-control">
+								 
+								<div class="row d-flex justify-content-between">
+                               <div class="col-md-3">
+                               	  <label>Nom</label>
+                                  <input type="text" id="tnom" class="form-control" placeholder="Nom">
+                               </div>
+                               <div class="col-md-3">
+                                   <label>Prénom</label>
+                                  <input type="text" id="tprenom" class="form-control" placeholder="Prénom">
+                               </div>
+                               <div class="col-md-3">
+                                   <label for="exampleFormControlSelect1">Sexe</label>
+									    <select class="form-control" id="cmbsexe">
+									      <option>Choisir...</option>
+									      <option>Masculin</option>
+									      <option>Feminin</option>
+									    </select>
+                               </div>
+
+                           </div>
+                           <div class="row d-flex justify-content-between">
+                               <div class="col-md-3">
+                                    <label>Date naissance</label>
+                                  <input type="date" id="datenaissance" class="form-control">
+                               </div>
+                               <div class="col-md-3">
+                                   <label>Lieu naissance</label>
+                                  <input type="text" id="tlieunaissance" class="form-control" placeholder="Lieu naissance">
+                               </div>
+                               <div class="col-md-3">
+                                   <label>Nationalité</label>
+                                  <input type="text" id="tnatinalite" class="form-control" placeholder="Nationalité">
+                               </div>
+
+                           </div>
+                            <div class="row d-flex justify-content-between">
+                               <div class="col-md-3">
+                                    <label>Adresse</label>
+                                  <input type="text" id="tadresse" class="form-control">
+                               </div>
+                               
+
+                           </div>
+                           <div class="row d-flex justify-content-evenly mt-2">
+                               <div class="col-md-3">
+                                   <button type="button"
+                                    class="btn btn-secondary mx-4"
+                                    data-dismiss="modal">
+                            Annuler</button>
+                            <button type="button"
+                                    class="btn btn-primary">
+                            Enregistrer
+                        </button>
+                               </div>
+                               
+
+                           </div>
+							</form>
+                 </div>
+			
+				</div>			
+				
+			</div>
+			<div class="m-2 mycontent shadow-lg p-3 mb-5 bg-body rounded page" id="addeeleve" >
+				<div class="row d-flex justify-content-evenly page">
+							<h1>
+								Liste eleves
+							</h1>
+			
+				</div>			
+				
+			</div>
+			
+		</section>
+
+		<!-- Fin des pages -->
+		
+
+
+	</div>
+	<!--Modal inscription-->
+	 <div class="container mt-"
+            >
+            
+            <!-- Modal -->
+            <div class="modal fade"
+                id="exampleModal" >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Inscrire un nouveau parent</h5>
+                            <button type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">
+                                ×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row d-flex justify-content-evenly page">
+							<form class="form-control">
+								 
+								<div class="row d-flex justify-content-between">
+                               <div class="col-md-3">
+                               	  <label>Nom</label>
+                                  <input type="text" id="tnomp" class="form-control" placeholder="Nom">
+                               </div>
+                               <div class="col-md-3">
+                                   <label>Prénom</label>
+                                  <input type="text" id="tprenomp" class="form-control" placeholder="Prénom">
+                               </div>
+                               <div class="col-md-3">
+                                   <label for="exampleFormControlSelect1">Sexe</label>
+									    <select class="form-control" id="cmbsexe">
+									      <option>Choisir...</option>
+									      <option>Masculin</option>
+									      <option>Feminin</option>
+									    </select>
+                               </div>
+
+                           </div>
+							</form>
+                 </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button"
+                                    class="btn btn-secondary"
+                                    data-dismiss="modal">
+                            Annuler</button>
+                            <button type="button"
+                                    class="btn btn-primary">
+                            Enregistrer
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<!--Javascript-->
+
+	<!--Javascript bootstrap-->
+	<script src=
+"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity=
+"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+                integrity=
+"sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+                crossorigin="anonymous"></script>
+
+                <!--Javascript sidenav-->
+	<script>
+		var tooltipTriggerList =
+		[].slice.call(
+		document.querySelectorAll('[data-toggle="tooltip"]'));
+            var tooltipList =
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+		var menu_btn=document.querySelector("#menu-btn")
+		var sidebar=document.querySelector("#sidebar")
+		var container=document.querySelector(".my-container")
+		menu_btn.addEventListener("click",()=>{
+			sidebar.classList.toggle("active-nav")
+			container.classList.toggle("active-cont")
+		});
+
+		//Javascript single page 
+
+		let pg=document.querySelector('.page');
+		let menu=document.querySelector('.menu')
+		function showPage(page){
+			document.querySelectorAll('.page').forEach(page=>{
+				page.style.display='none';
+			})
+			
+			document.querySelector(`#${page}`).style.display='block';
+		}
+
+		document.addEventListener('DOMContentLoaded', function(){
+			document.querySelectorAll('.menu').forEach(menu => {
+					menu.onclick = function(){
+						showPage(this.dataset.page);
+					}
+			});
+
+		});
+		
+		
+	</script>
+
+</body>
+</html>
